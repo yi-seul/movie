@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import ReplaceImage from "../../assets/images/unknown.png";
 import { flexCenter } from "../../styles/common";
-import { theme } from "../../styles/theme";
 
 function MovieCard({ movie }) {
     // console.log(movie);
@@ -18,12 +17,12 @@ function MovieCard({ movie }) {
         } else {
             setMovieOverview(movieOverview);
         }
-    }, [movie]);
+    }, [movie, movieOverview]);
 
     return (
         <S.Wrapper>
             <S.Poster>
-                <img src={movie.poster_path ? IMAGE_URL.current + movie.poster_path : ReplaceImage} />
+                <img src={movie.poster_path ? IMAGE_URL.current + movie.poster_path : ReplaceImage} alt="이미지" />
             </S.Poster>
             <S.DescBox>
                 <h1>{movie.title}</h1>

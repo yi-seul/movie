@@ -22,7 +22,7 @@ function MovieListContent() {
         // console.log(inView); -> 처음에는 false 출력, <div ref={ref}></div>를 만나면 true 출력
         if (!inView || isFetching) return;
         fetchNextPage();
-    }, [inView]);
+    }, [inView, fetchNextPage, isFetching]);
 
     /*
         react-query를 사용하지 않고 무한 스크롤링을 만든다면?

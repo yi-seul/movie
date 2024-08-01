@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import MainImages from "../../../assets/images/flix-main.jpg";
-import { theme } from "../../../styles/theme";
 
 function HomeBanner() {
     return (

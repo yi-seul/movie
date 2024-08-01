@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { flexAlignCenter } from "../../../styles/common";
-import { theme } from "../../../styles/theme";
 
 function LayoutHeader() {
     return (
